@@ -14,7 +14,7 @@
  Date: 10/06/2019 23:46:42
 */
 
-SET NAMES utf8mb4;
+SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
@@ -30,7 +30,7 @@ CREATE TABLE `total_data` (
   `allBus` varchar(255) DEFAULT NULL,
   `allTaxi` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ;
 
 -- ----------------------------
 -- Records of total_data
@@ -48,13 +48,13 @@ DROP TABLE IF EXISTS `trip_data`;
 CREATE TABLE `trip_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(11) NOT NULL,
-  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `tripType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8   DEFAULT NULL,
+  `tripType` varchar(255) CHARACTER SET utf8   DEFAULT NULL,
   `distance` varchar(255) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `time` varchar(255) DEFAULT NULL,
-  `trajectory` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `Calorie` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `trajectory` text CHARACTER SET utf8  ,
+  `Calorie` varchar(255) CHARACTER SET utf8   DEFAULT NULL,
   `speed` varchar(255) DEFAULT NULL,
   `price` varchar(255) DEFAULT NULL,
   `startPlace` varchar(255) DEFAULT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE `trip_data` (
   `endCode` varchar(255) DEFAULT NULL,
   `mark` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=241 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=241 DEFAULT CHARSET=utf8 ;
 
 -- ----------------------------
 -- Records of trip_data
@@ -181,7 +181,7 @@ CREATE TABLE `user` (
   `userName` varchar(255) DEFAULT NULL,
   `passWord` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
 
 -- ----------------------------
 -- Records of user
@@ -203,11 +203,11 @@ CREATE TABLE `user_info` (
   `address` varchar(255) DEFAULT NULL,
   `Marriage` varchar(255) DEFAULT NULL,
   `userName` varchar(255) DEFAULT NULL,
-  `img` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `img` text CHARACTER SET utf8  ,
   `sex` varchar(255) DEFAULT NULL,
   `identity` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ;
 
 -- ----------------------------
 -- Records of user_info
